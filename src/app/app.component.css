@@ -1,0 +1,22 @@
+body {
+    background-color: #FAFAFA;
+}
+
+.container-fluid {
+    height: 100vh;
+}
+
+header {
+    background-color: #212121;
+    padding: 10px 0;
+    color: #fafafa;
+}
+
+ng-sidebar {
+    width: 300px;
+}
+
+/* div[ng-sidebar-content] {
+    width: 100%;
+    margin-left: 300px;
+} */
