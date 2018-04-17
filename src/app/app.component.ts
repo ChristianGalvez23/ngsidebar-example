@@ -9,15 +9,18 @@ import { Sidebar } from 'ng-sidebar';
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild(Sidebar) sidebar: Sidebar;
-
-  public _opened: boolean = false;
+  public opened: boolean = false;
+  public mode: any = 'push';
 
   ngAfterViewInit() {
-    this.sidebar.sidebarClass = 'sidebar';
-    console.log(this.sidebar);
+
   }
 
-  _toggleSidebar(option: string): void {
-    this._opened = !this._opened;
+  _toggleSidebar(option: any): void {
+    this.mode = option;
+  }
+
+  _openSidebar() {
+    this.opened = this.sidebar.opened === undefined ? false : !this.sidebar.opened;
   }
 }

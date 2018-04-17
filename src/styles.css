@@ -1,8 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:700');
 
 body {
   background-color: #fafafa;
   font-family: 'Muli' !important;
   font-size: 0.9rem !important;
+}
+
+.logo {
+  font-family: Ubuntu;
+  color: #fafafa;
+  letter-spacing: .5px;
+}
+
+.menu {
+  font-family: Ubuntu;
 }

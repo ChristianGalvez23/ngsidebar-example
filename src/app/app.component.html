@@ -1,47 +1,62 @@
 <div class="container-fluid p-0">
   <header>
-    <h3 class="text-center">Sidebar functionality using ng-sidebar</h3>
+    <nav class="navbar navbar-expand-md">
+      <a href="#" class="navbar-brand logo">ChristianGálvez</a>
+    </nav>
   </header>
 
   <ng-sidebar-container>
-    <ng-sidebar [(opened)]="_opened" [mode]="'push'">
+    <ng-sidebar [opened]="opened" [mode]="mode">
+      <header>
+        <h5 class="menu">Menu</h5>
+      </header>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-lin active">Option 1</a>
+          <a class="nav-link active">Option 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 2</a>
+          <a class="nav-link">Option 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 3</a>
+          <a class="nav-link">Option 3</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 4</a>
+          <a class="nav-link">Option 4</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 5</a>
+          <a class="nav-link">Option 5</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 6</a>
+          <a class="nav-link">Option 6</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 7</a>
+          <a class="nav-link">Option 7</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 8</a>
+          <a class="nav-link">Option 8</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 9</a>
+          <a class="nav-link">Option 9</a>
         </li>
         <li class="nav-item">
-          <a class="nav-lin">Option 10</a>
+          <a class="nav-link">Option 10</a>
         </li>
       </ul>
     </ng-sidebar>
 
     <div ng-sidebar-content>
-      <h3>Here is the content</h3>
-      <button type="button" (click)="_toggleSidebar()">Toggle sidebar</button>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+              <button type="button" class="btn btn-primary" (click)="_openSidebar()">Open/Close Sidebar</button>
+          </div>
+          <div class="col-md-4">
+              <button type="button" class="btn btn-primary" (click)="_toggleSidebar('push')">Push Content</button>
+              <button type="button" class="btn btn-primary" (click)="_toggleSidebar('over')">Over Content</button>
+              <button type="button" class="btn btn-primary" (click)="_toggleSidebar('slide')">Slide content</button>
+          </div>
+        </div>
+      </div>
     </div>
   </ng-sidebar-container>
 </div>
