@@ -1,27 +1,47 @@
 <div class="container-fluid p-0">
-<header>
-  <h3 class="text-center">Sidebar functionality using ng-sidebar</h3>
-</header>
+  <header>
+    <h3 class="text-center">Sidebar functionality using ng-sidebar</h3>
+  </header>
 
-<ng-sidebar-container>
-  <ng-sidebar [(opened)]="_opened" [mode]="push">
-    <ul>
-      <li>Option 1</li>
-      <li>Option 2</li>
-      <li>Option 3</li>
-      <li>Option 4</li>
-      <li>Option 5</li>
-      <li>Option 6</li>
-      <li>Option 7</li>
-      <li>Option 8</li>
-      <li>Option 9</li>
-      <li>Option 10</li>
-    </ul>
-  </ng-sidebar>
+  <ng-sidebar-container>
+    <ng-sidebar [(opened)]="_opened" [mode]="'push'">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-lin active">Option 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 5</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 6</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 7</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 8</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 9</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-lin">Option 10</a>
+        </li>
+      </ul>
+    </ng-sidebar>
 
-  <div ng-sidebar-content>
-    <h3>Here is the content</h3>
-    <button type="button" (click)="_toggleSidebar()">Toggle sidebar</button>
-  </div>
-</ng-sidebar-container>
+    <div ng-sidebar-content>
+      <h3>Here is the content</h3>
+      <button type="button" (click)="_toggleSidebar()">Toggle sidebar</button>
+    </div>
+  </ng-sidebar-container>
 </div>
